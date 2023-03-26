@@ -1,11 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView } from 'react-native';
+import { HomeCard, HomeChart, HomeDate } from '../components/home';
 
 const HomeScreen = () => {
   return (
-    <View>
-      <Text>Home Screen</Text>
-    </View>
+    <ScrollView>
+      <HomeDate />
+      <HomeChart />
+      <HomeCard />
+    </ScrollView>
   );
 };
 

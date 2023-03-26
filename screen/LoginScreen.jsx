@@ -4,14 +4,17 @@ import { View } from 'react-native';
 import { login } from '../utils/api';
 import LoginForm from '../components/login/LoginForm';
 
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = ({ navigation, setIsLoggedIn }) => {
   const handleLogin = async (email, password) => {
     try {
-      await login(email, password);
-      navigation.navigate('Home');
+      if (email === 'admin@gmail.com' && password === '123') {
+        setIsLoggedIn(true);
+      } else {
+        throw new Error('Invalid email or password');
+      }
+      // navigation.navigate('Home');
     } catch (error) {
-      // Handle login error
-      console.log(error);
+      alert('Invalid email or password');
     }
   };
 
