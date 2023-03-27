@@ -46,10 +46,26 @@ const BottomNavigation = () => {
       }}
       initialRouteName='Home'
     >
-      <Tab.Screen name='Home' component={HomeScreen} />
-      <Tab.Screen name='Application' component={ApplicationScreen} />
-      <Tab.Screen name='Chart' component={ChartScreen} />
-      <Tab.Screen name='Setting' component={SettingScreen} />
+      <Tab.Screen
+        name='HomeScreen'
+        component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen
+        name='Application'
+        component={ApplicationScreen}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen
+        name='Chart'
+        component={ChartScreen}
+        options={{ headerShown: false }}
+      />
+      <Tab.Screen
+        name='Setting'
+        component={SettingScreen}
+        options={{ headerShown: false }}
+      />
     </Tab.Navigator>
   );
 };

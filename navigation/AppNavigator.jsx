@@ -3,25 +3,26 @@ import { NavigationContainer } from '@react-navigation/native';
 import LoginScreen from '../screen/LoginScreen';
 import BottomNavigation from '../components/navigation/BottomNavigation';
 import { useState } from 'react';
+import ApplianceDetails from '../app/appliance/[id]';
 
-// const AuthStack = createNativeStackNavigator();
-// const MainStack = createNativeStackNavigator();
+const MainStack = createNativeStackNavigator();
 
-// const AuthNavigator = () => {
-//   return (
-//     <AuthStack.Navigator>
-//       <AuthStack.Screen name='Login' component={LoginScreen} />
-//     </AuthStack.Navigator>
-//   );
-// };
-
-// const MainNavigator = () => {
-//   return (
-//     <MainStack.Navigator>
-//       <MainStack.Screen name='Home' component={BottomNavigation} />
-//     </MainStack.Navigator>
-//   );
-// };
+const MainNavigator = () => {
+  return (
+    <MainStack.Navigator>
+      <MainStack.Screen
+        name='Main'
+        component={BottomNavigation}
+        options={{ headerShown: false }}
+      />
+      <MainStack.Screen
+        name='ApplianceDetails'
+        component={ApplianceDetails}
+        options={{ headerShown: false }}
+      />
+    </MainStack.Navigator>
+  );
+};
 
 const AppNavigator = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -29,7 +30,7 @@ const AppNavigator = () => {
   return (
     <NavigationContainer independent={true}>
       {isLoggedIn ? (
-        <BottomNavigation />
+        <MainNavigator />
       ) : (
         <LoginScreen setIsLoggedIn={setIsLoggedIn} />
       )}
