@@ -1,15 +1,29 @@
-# Expo Router Example
+# RESYNC Mobile App
 
-Use [`expo-router`](https://expo.github.io/router) to build native navigation using files in the `app/` directory.
+## Technologires used
 
-## 🚀 How to use
+- @react-navigation/bottom-tabs
+- expo-checkbox
+- react-native-chart-kit
+- react-native-calendar-picker
+- react-native-vector-icons
+
+## 🚀 How to run
 
 ```sh
-npx create-react-native-app -t with-router
+npm install
+
+npm start
 ```
 
-## 📝 Notes
+## 📝 Exported expo project
 
-- [Expo Router: Docs](https://expo.github.io/router)
-- [Expo Router: Repo](https://github.com/expo/router)
-- [Request for Comments](https://github.com/expo/router/discussions/1)
+- [https://expo.dev/@thurein23/simple-dash?serviceType=classic&distribution=expo-go]
+
+## Screens and functions
+
+- You can login using email and password with **admin@gmail.com** and **123**
+- From this screen you can go into any screen by clicking bottom navigation icons
+- In home screen you can select date (range) and watch Chart
+- In application screen you can see appliance list and can watch details by clicking items
+- In chart screen you can choose chart type and see chart info
