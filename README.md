@@ -19,6 +19,7 @@ npm start
 ## 📝 Exported expo project
 
 - [https://expo.dev/@thurein23/simple-dash?serviceType=classic&distribution=expo-go]
+- You can test app by scaning the **qrcode** from above link using **expo app** (IOS or Android)
 
 ## Screens and functions
 
